@@ -992,9 +992,16 @@ height: 330px;
 .footer__contact-item {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: var(--space-sm);
   margin-bottom: var(--space-md);
   font-size: 0.95rem;
+}
+
+.footer__column--contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer__contact-item svg {
