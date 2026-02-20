@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Romana's Book - Издательство музыкальных книг для детей. Балеты Чайковского в уникальных иллюстрированных изданиях с оригинальными записями оркестра.">
+  <meta name="keywords" content="музыкальные книги, балет, Чайковский, Щелкунчик, Лебединое озеро, детские книги, подарочные издания">
+  
+  <title>Romana's Book - Издательство музыкальных книг</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Romana's Book - Музыкальные книги для детей">
+  <meta property="og:description" content="Уникальные иллюстрированные издания с музыкой великих композиторов">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://new.music-book.me">
+</head>
+<body>
+  <!-- Page Transition -->
+  <div class="page-transition">
+    <div class="page-transition__content">
+      <div class="page-transition__logo">Romana's Book</div>
+      <div class="page-transition__loader">
+        <div class="page-transition__loader-bar"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Particles Background -->
+  <div class="particles-container" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div>
+          <div class="header__logo-text">Romana's Book</div>
+          <div class="header__logo-tagline">Музыкальное издательство</div>
+        </div>
+      </a>
+      
+      <nav class="nav">
+        <button class="nav__toggle" aria-label="Меню">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
+          <li><a href="#books" class="nav__link">Книги</a></li>
+          <li><a href="#about" class="nav__link">Об издательстве</a></li>
+          <li><a href="info.html" class="nav__link">Доставка</a></li>
+          <li><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+        
+        <a href="#books" class="btn btn--gold btn--lg">Выбрать книгу</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__background">
+      <div class="hero__pattern"></div>
+      
+      <!-- Floating Ballet Dancers -->
+      <div class="hero__dancer hero__dancer--1" aria-hidden="true">🩰</div>
+      <div class="hero__dancer hero__dancer--2" aria-hidden="true">🎭</div>
+      <div class="hero__dancer hero__dancer--3" aria-hidden="true">🎼</div>
+      
+      <!-- Musical Notes Container -->
+      <div class="hero__notes" aria-hidden="true"></div>
+    </div>
+    
+    <div class="hero__content">
+      <p class="hero__subtitle">Издательство музыкальных книг</p>
+      <h1 class="hero__title">
+        Волшебство балета
+        <span>в каждой странице</span>
+      </h1>
+      <p class="hero__description">
+        Уникальные иллюстрированные издания с музыкой великих композиторов. 
+        Каждая книга — это путешествие в мир классического балета с оригинальными 
+        записями лучших оркестров России.
+      </p>
+      <div class="hero__cta">
+        <a href="#books" class="btn btn--primary btn--lg btn-ripple">
+          <span>Коллекция книг</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#about" class="btn btn--outline btn--lg">Об издательстве</a>
+      </div>
+    </div>
+    
+    <div class="hero__scroll">
+      <span class="hero__scroll-text">Листайте вниз</span>
+      <div class="hero__scroll-icon"></div>
+    </div>
+  </section>
+
+  <!-- Books Section -->
+  <section id="books" class="section books-section">
+    <div class="container">
+      <div class="books-section__header reveal">
+        <div class="ornament">
+          <span class="ornament__line"></span>
+          <span class="ornament__symbol">♪</span>
+          <span class="ornament__line"></span>
+        </div>
+        <h2 class="books-section__title">Коллекция книг</h2>
+        <p class="books-section__subtitle">
+          Каждая книга — это настоящее произведение искусства с тиснением золотой фольгой, 
+          оригинальными иллюстрациями и записями симфонических оркестров
+        </p>
+      </div>
+      
+      <div class="books-grid">
+        <!-- Щелкунчик -->
+        <article class="book-card reveal reveal--delay-1">
+          <div class="book-card__image-wrapper">
+            <img src="images/nut.jpeg" alt="Книга Щелкунчик" class="book-card__image" 
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Crect fill=%22%23f5ede4%22 width=%22400%22 height=%22500%22/%3E%3Ctext x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2232%22 fill=%22%231A1A1A%22%3EЩелкунчик%3C/text%3E%3C/svg%3E'">
+            <span class="book-card__badge">Бестселлер</span>
+            <div class="book-card__overlay">
+              <a href="books/nutcracker.html" class="btn btn--gold book-card__overlay-btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="book-card__content">
+            <span class="book-card__composer">П.И. Чайковский</span>
+            <h3 class="book-card__title">Щелкунчик</h3>
+            <p class="book-card__description">
+              Музыкальная книга по самой узнаваемой постановке балета с оригинальной 
+              записью Большого симфонического оркестра
+            </p>
+            <div class="book-card__footer">
+              <span class="book-card__price">3 500 ₽</span>
+              <div class="book-card__features">
+                <span class="book-card__feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                  </svg>
+                  10 треков
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Лебединое озеро -->
+        <article class="book-card reveal reveal--delay-2">
+          <div class="book-card__image-wrapper">
+            <img src="images/lake.jpg" alt="Книга Лебединое озеро" class="book-card__image"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Crect fill=%22%23e8f4f8%22 width=%22400%22 height=%22500%22/%3E%3Ctext x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2228%22 fill=%22%231A1A1A%22%3EЛебединое озеро%3C/text%3E%3C/svg%3E'">
+            <div class="book-card__overlay">
+              <a href="books/swan-lake.html" class="btn btn--gold book-card__overlay-btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="book-card__content">
+            <span class="book-card__composer">П.И. Чайковский</span>
+            <h3 class="book-card__title">Лебединое озеро</h3>
+            <p class="book-card__description">
+              Погрузитесь в мир балета с иллюстрациями, знакомящими с волшебством 
+              сцены и музыкой Госакадемического оркестра
+            </p>
+            <div class="book-card__footer">
+              <span class="book-card__price">3 500 ₽</span>
+              <div class="book-card__features">
+                <span class="book-card__feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                  </svg>
+                  10 треков
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Спящая красавица -->
+        <article class="book-card reveal reveal--delay-3">
+          <div class="book-card__image-wrapper">
+            <img src="images/sleep.jpg" alt="Книга Спящая красавица" class="book-card__image"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Crect fill=%22%23F8F4E9%22 width=%22400%22 height=%22500%22/%3E%3Ctext x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2226%22 fill=%22%231A1A1A%22%3EСпящая красавица%3C/text%3E%3C/svg%3E'">
+            <div class="book-card__overlay">
+              <a href="books/sleeping-beauty.html" class="btn btn--gold book-card__overlay-btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="book-card__content">
+            <span class="book-card__composer">П.И. Чайковский</span>
+            <h3 class="book-card__title">Спящая красавица</h3>
+            <p class="book-card__description">
+              Роскошная постановка балета с реалистичными иллюстрациями, 
+              переносящими в Михайловский театр
+            </p>
+            <div class="book-card__footer">
+              <span class="book-card__price">3 500 ₽</span>
+              <div class="book-card__features">
+                <span class="book-card__feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                  </svg>
+                  10 треков
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Детский альбом -->
+        <article class="book-card reveal reveal--delay-1">
+          <div class="book-card__image-wrapper">
+            <img src="images/kid.jpeg" alt="Книга Детский альбом" class="book-card__image"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Crect fill=%22%23fff8e1%22 width=%22400%22 height=%22500%22/%3E%3Ctext x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2228%22 fill=%22%231A1A1A%22%3EДетский альбом%3C/text%3E%3C/svg%3E'">
+            <div class="book-card__overlay">
+              <a href="books/children-album.html" class="btn btn--gold book-card__overlay-btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="book-card__content">
+            <span class="book-card__composer">П.И. Чайковский</span>
+            <h3 class="book-card__title">Детский альбом</h3>
+            <p class="book-card__description">
+              10 музыкальных пьес со стихами русских классиков и нежными 
+              иллюстрациями для чтения взрослых с детьми
+            </p>
+            <div class="book-card__footer">
+              <span class="book-card__price">3 500 ₽</span>
+              <div class="book-card__features">
+                <span class="book-card__feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                  </svg>
+                  10 треков
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Золушка -->
+        <article class="book-card reveal reveal--delay-2">
+          <div class="book-card__image-wrapper">
+            <img src="images/golden.png" alt="Книга Золушка" class="book-card__image"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Crect fill=%22%23e3f2fd%22 width=%22400%22 height=%22500%22/%3E%3Ctext x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2232%22 fill=%22%231A1A1A%22%3EЗолушка%3C/text%3E%3C/svg%3E'">
+            <div class="book-card__overlay">
+              <a href="books/cinderella.html" class="btn btn--gold book-card__overlay-btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="book-card__content">
+            <span class="book-card__composer">С.С. Прокофьев</span>
+            <h3 class="book-card__title">Золушка</h3>
+            <p class="book-card__description">
+              Сказочная история в музыке великого Прокофьева с волшебными 
+              иллюстрациями и классической записью
+            </p>
+            <div class="book-card__footer">
+              <span class="book-card__price">3 500 ₽</span>
+              <div class="book-card__features">
+                <span class="book-card__feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                  </svg>
+                  10 треков
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Анюта идёт в театр -->
+        <article class="book-card reveal reveal--delay-3">
+          <div class="book-card__image-wrapper">
+            <img src="images/anyta.jpg" alt="Книга Анюта идёт в театр" class="book-card__image"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Crect fill=%22%23fce4d6%22 width=%22400%22 height=%22500%22/%3E%3Ctext x=%22200%22 y=%22230%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2226%22 fill=%22%231A1A1A%22%3EАнюта идёт%3C/text%3E%3Ctext x=%22200%22 y=%22270%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2226%22 fill=%22%231A1A1A%22%3Eв театр%3C/text%3E%3C/svg%3E'">
+            <span class="book-card__badge">Новинка</span>
+            <div class="book-card__overlay">
+              <a href="books/anyuta.html" class="btn btn--gold book-card__overlay-btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="book-card__content">
+            <span class="book-card__composer">П.И. Чайковский</span>
+            <h3 class="book-card__title">Анюта идёт в театр</h3>
+            <p class="book-card__description">
+              К 185-летию Чайковского. 13 музыкальных произведений в записи 
+              Симфонического оркестра Большого театра
+            </p>
+            <div class="book-card__footer">
+              <span class="book-card__price">3 500 ₽</span>
+              <div class="book-card__features">
+                <span class="book-card__feature">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                  </svg>
+                  13 треков
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section class="section advantages-section">
+    <div class="container">
+      <div class="advantages-header reveal">
+        <h2 class="advantages-title">Преимущества</h2>
+        <p class="advantages-subtitle">КНИГ</p>
+      </div>
+      
+      <div class="advantages-timeline">
+        <!-- Point 1 -->
+        <div class="advantage-item advantage-item--right reveal">
+          <div class="advantage-item__image">
+            <img src="images/point-border.webp" alt="" class="advantage-item__border">
+            <img src="images/stage-1.png" alt="Волшебные иллюстрации" class="advantage-item__photo">
+          </div>
+          <div class="advantage-item__content">
+            <span class="advantage-item__number">1</span>
+            <p class="advantage-item__text">
+              <strong>Волшебные иллюстрации</strong> с первых страниц погружают нас в мир балета!
+            </p>
+            <p class="advantage-item__text">
+              У вас появится полное ощущение присутствия в зрительном зале театра.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Point 2 -->
+        <div class="advantage-item advantage-item--left reveal">
+          <div class="advantage-item__image">
+            <img src="images/point-border.webp" alt="" class="advantage-item__border">
+            <img src="images/stage-2.png" alt="Искусство в игровой форме" class="advantage-item__photo">
+          </div>
+          <div class="advantage-item__content">
+            <span class="advantage-item__number">2</span>
+            <p class="advantage-item__text">
+              <strong>Книга знакомит детей с искусством</strong> в игровой форме.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Point 3 -->
+        <div class="advantage-item advantage-item--right reveal">
+          <div class="advantage-item__image">
+            <img src="images/point-border.webp" alt="" class="advantage-item__border">
+            <img src="images/stage-3.png" alt="Оригинальная запись оркестра" class="advantage-item__photo">
+          </div>
+          <div class="advantage-item__content">
+            <span class="advantage-item__number">3</span>
+            <p class="advantage-item__text">
+              <strong>В книге звучит оригинальная запись</strong> Большого симфонического оркестра П. И. Чайковского.
+            </p>
+            <p class="advantage-item__text">
+              Продолжительность звучания композиций на каждом развороте 90-210 секунд.
+            </p>
+            <p class="advantage-item__text">
+              Вы сможете ощутить эмоции и смысл происходящего, глубоко вникнуть в сюжет. Качественный музыкальный блок обеспечит чистое звучание.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Point 4 -->
+        <div class="advantage-item advantage-item--left reveal">
+          <div class="advantage-item__image">
+            <img src="images/point-border.webp" alt="" class="advantage-item__border">
+            <img src="images/stage-4.png" alt="Удобный размер" class="advantage-item__photo">
+          </div>
+          <div class="advantage-item__content">
+            <span class="advantage-item__number">4</span>
+            <p class="advantage-item__text">
+              <strong>Продуман размер книги.</strong> Удобно помещается в детские ручки.
+            </p>
+            <p class="advantage-item__text">
+              Матовая поверхность страниц не создает блики при чтении.
+            </p>
+            <p class="advantage-item__text">
+              Страницы книги выполнены из плотного картона. Ребёнок может изучать её самостоятельно, без переживаний за сохранность книги.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Point 5 -->
+        <div class="advantage-item advantage-item--right reveal">
+          <div class="advantage-item__image">
+            <img src="images/point-border.webp" alt="" class="advantage-item__border">
+            <img src="images/stage-5.png" alt="Подарочная коробка" class="advantage-item__photo">
+          </div>
+          <div class="advantage-item__content">
+            <span class="advantage-item__number">5</span>
+            <p class="advantage-item__text">
+              <strong>Вы получите книгу в подарочной коробке</strong> на магните. Готовый подарок, который сразу можно вручить.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-section__inner">
+        <div class="about-section__content reveal reveal--left">
+          <span class="about-section__label">История издательства</span>
+          <h2 class="about-section__title">Созданы с любовью к музыке и детям</h2>
+          <p class="about-section__text">
+            Автор проекта Romana создала музыкальные книги, вдохновлённая своими 
+            дочерьми Мирой и Яной. Каждая книга — это приглашение в волшебный мир 
+            классической музыки и балета, где каждый разворот сопровождается 
+            оригинальными записями лучших оркестров России.
+          </p>
+          <p class="about-section__text">
+            Наши книги — это не просто издания, а настоящие произведения искусства 
+            с качественными иллюстрациями, образовательной ценностью и музыкой, 
+            которая звучит на каждой странице.
+          </p>
+          <p class="about-section__signature">— Romana</p>
+        </div>
+        <div class="about-section__image reveal reveal--right">
+          <img src="images/romana.png" alt="Автор Romana с книгами"
+               onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 500 600%22%3E%3Crect fill=%22%23C9A962%22 width=%22500%22 height=%22600%22/%3E%3Ctext x=%22250%22 y=%22300%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2224%22 fill=%22%231A1A1A%22%3ERomana%27s Book%3C/text%3E%3C/svg%3E'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="section" style="background: white;">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: var(--space-3xl);">
+        <div class="ornament">
+          <span class="ornament__line"></span>
+          <span class="ornament__symbol">🏛</span>
+          <span class="ornament__line"></span>
+        </div>
+        <h2 style="font-family: var(--font-display); margin-bottom: var(--space-md);">Сотрудничество с музеями</h2>
+        <p style="color: var(--color-text-medium); max-width: 600px; margin: 0 auto;">
+          Наши книги представлены в ведущих культурных институциях России
+        </p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); align-items: center;">
+        <!-- Картинка -->
+        <div class="reveal reveal--left">
+          <img src="images/83c601de-12b8-480f-9.png.webp" alt="Презентация в Большом театре" 
+               style="width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-medium);">
+        </div>
+        
+        <!-- Текстовые блоки -->
+        <div>
+          <!-- Большой театр -->
+          <div class="reveal reveal--delay-1" style="background: var(--color-cream); padding: var(--space-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--color-gold); margin-bottom: var(--space-lg);">
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin: 0 0 var(--space-sm) 0; color: var(--color-gold-dark);">Большой театр</h3>
+            <p style="color: var(--color-text-medium); line-height: 1.8; margin: 0; font-size: 0.95rem;">
+              В сувенирном магазине Большого театра вы можете приобрести книгу-сказку «Щелкунчик». 
+              Книга издана специально для Большого театра, тираж — 500 экземпляров. На прошедшей 
+              за кулисами театра презентации Романа Ибрагимова лично представила эту уникальную книгу.
+            </p>
+          </div>
+          
+          <!-- Музей Чайковского -->
+          <div class="reveal reveal--delay-2" style="background: var(--color-cream); padding: var(--space-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--color-gold);">
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin: 0 0 var(--space-sm) 0; color: var(--color-gold-dark);">Музей П.И. Чайковского</h3>
+            <p style="color: var(--color-text-medium); line-height: 1.8; margin: 0; font-size: 0.95rem;">
+              Во время экскурсий сотрудники музея П.И. Чайковского рассказывают с помощью 
+              наших книг сюжет и постановку балета. Книги стали незаменимым инструментом 
+              для знакомства посетителей с творчеством великого композитора.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Banner -->
+  <section class="section section--sm" style="text-align: center;">
+    <div class="container">
+      <h3 style="color: var(--color-text-dark); font-family: var(--font-display); margin-bottom: var(--space-md);">
+        Доставка по всей России
+      </h3>
+      <p style="color: var(--color-text-dark); opacity: 0.8; margin-bottom: var(--space-lg);">
+        СДЭК: Москва и Санкт-Петербург — 2-3 дня • Россия — от 2 до 7 дней • От 180 рублей
+      </p>
+      <a href="info.html" class="btn btn--primary">Подробнее о доставке</a>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section map-section">
+    <div class="container">
+      <div class="map-info">
+        <p class="map-info__address">г. Москва ул. Каховка д. 25, вход у первого подъезда</p>
+        <p class="map-info__hours">Пн-Пт с 10:00 до 17:00</p>
+        <p class="map-info__weekend">Сб-Вс выходные</p>
+      </div>
+      <div class="map-container">
+        <div id="yandex-map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacts" class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">Romana's Book</div>
+          <p class="footer__tagline">
+            Издательство музыкальных книг для детей. Погружаем в мир классической 
+            музыки и балета через уникальные иллюстрированные издания.
+          </p>
+          <div class="footer__social">
+            <a href="https://instagram.com" class="footer__social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="18" cy="6" r="1"/>
+              </svg>
+            </a>
+            <a href="https://t.me" class="footer__social-link" aria-label="Telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.18-1.82 6.97-3.02 8.38-3.61 3.99-1.66 4.81-1.95 5.35-1.96.12 0 .38.03.55.17.14.12.18.28.2.45-.01.06.01.24 0 .38z"/>
+              </svg>
+            </a>
+            <a href="https://vk.com" class="footer__social-link" aria-label="VK">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm5.07 13.33h-1.4c-.53 0-.69-.42-1.64-1.38-.82-.77-1.18-.87-1.38-.87-.28 0-.36.08-.36.46v1.26c0 .33-.1.53-1 .53-1.47 0-3.1-.89-4.24-2.55-1.72-2.43-2.19-4.25-2.19-4.63 0-.2.08-.38.46-.38h1.4c.34 0 .47.16.6.53.66 1.9 1.77 3.57 2.23 3.57.17 0 .25-.08.25-.51V9.47c-.05-.87-.5-.95-.5-1.26 0-.16.13-.32.35-.32h2.2c.3 0 .4.16.4.5v2.62c0 .27.12.37.2.37.17 0 .32-.1.63-.41.98-1.1 1.68-2.78 1.68-2.78.09-.2.25-.38.6-.38h1.4c.42 0 .51.21.42.5-.18.87-1.91 3.26-1.91 3.26-.15.24-.2.35 0 .63.15.2.63.63 .96 1.01.6.69 1.06 1.27 1.18 1.67.13.4-.08.6-.48.6z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Книги</h4>
+          <ul class="footer__links">
+            <li><a href="books/nutcracker.html">Щелкунчик</a></li>
+            <li><a href="books/swan-lake.html">Лебединое озеро</a></li>
+            <li><a href="books/sleeping-beauty.html">Спящая красавица</a></li>
+            <li><a href="books/children-album.html">Детский альбом</a></li>
+            <li><a href="books/cinderella.html">Золушка</a></li>
+            <li><a href="books/anyuta.html">Анюта идёт в театр</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Информация</h4>
+          <ul class="footer__links">
+            <li><a href="info.html">Доставка и оплата</a></li>
+            <li><a href="privacy.html">Политика конфиденциальности</a></li>
+            <li><a href="terms.html">Пользовательское соглашение</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h4>Контакты</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <span>+7 (927) 636-77-57</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>info@music-book.me</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Москва, ул. Каховка, 25</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Пн-Пт: 10:00 - 19:00</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2024 Romana's Book. ИП Ибрагимова Рома Данировна</p>
+        <div class="footer__legal">
+          <a href="privacy.html">Политика конфиденциальности</a>
+          <a href="terms.html">Обработка персональных данных</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  
+  <!-- Yandex Maps -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
+  <script>
+    ymaps.ready(function() {
+      var map = new ymaps.Map('yandex-map', {
+        center: [55.653076, 37.576011],
+        zoom: 15,
+        controls: ['zoomControl', 'geolocationControl']
+      });
+      
+      var placemark = new ymaps.Placemark([55.653076, 37.576011], {
+        balloonContentHeader: 'Romana\'s Book',
+        balloonContentBody: 'г. Москва ул. Каховка д. 25<br>Вход у первого подъезда',
+        balloonContentFooter: 'Пн-Пт: 10:00 - 17:00'
+      }, {
+        preset: 'islands#goldBookIcon'
+      });
+      
+      map.geoObjects.add(placemark);
+      map.behaviors.disable('scrollZoom');
+    });
+  </script>
+</body>
+</html>

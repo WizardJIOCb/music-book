@@ -1,0 +1,540 @@
+/* Romana's Book - Book Detail Page Styles */
+
+/* ================================
+   Book Hero Section
+================================ */
+
+.book-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 90px;
+  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-ivory) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-hero__bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0C17.9 0 0 17.9 0 40s17.9 40 40 40 40-17.9 40-40S62.1 0 40 0zm0 70c-16.5 0-30-13.5-30-30S23.5 10 40 10s30 13.5 30 30-13.5 30-30 30z' fill='%23C9A962'/%3E%3C/svg%3E");
+}
+
+.book-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Book Cover Display */
+.book-hero__cover {
+  position: relative;
+  perspective: 1500px;
+}
+
+.book-hero__cover-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: bookFloat 6s ease-in-out infinite;
+}
+
+@keyframes bookFloat {
+  0%, 100% {
+    transform: translateY(0) rotateY(-5deg);
+  }
+  50% {
+    transform: translateY(-15px) rotateY(5deg);
+  }
+}
+
+.book-hero__cover-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-lg);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(201, 169, 98, 0.2);
+  transition: transform var(--transition-elegant);
+}
+
+.book-hero__cover-wrapper:hover .book-hero__cover-image {
+  transform: scale(1.02);
+}
+
+/* Gold Foil Frame Effect */
+.book-hero__cover::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: 15px;
+  bottom: 15px;
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.book-hero__cover::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: -15px;
+  bottom: -15px;
+  border: 2px solid var(--color-gold-light);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Gift Box Badge */
+.book-hero__badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: var(--space-sm) var(--space-lg);
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+  color: var(--color-text-dark);
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-gold);
+  z-index: 10;
+}
+
+/* Book Info Content */
+.book-hero__content {
+  padding-left: var(--space-2xl);
+}
+
+.book-hero__composer {
+  font-family: var(--font-accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: var(--space-md);
+}
+
+.book-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+}
+
+.book-hero__title span {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 400;
+  color: var(--color-text-medium);
+  font-style: italic;
+  margin-top: var(--space-sm);
+}
+
+.book-hero__description {
+  font-size: 1.125rem;
+  color: var(--color-text-medium);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+}
+
+/* Price & Buy Section */
+.book-hero__purchase {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: var(--space-xl);
+}
+
+.book-hero__price {
+  text-align: center;
+  padding-right: var(--space-xl);
+  border-right: 1px solid var(--color-parchment);
+}
+
+.book-hero__price-label {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.book-hero__price-value {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-gold-dark);
+}
+
+.book-hero__price-value small {
+  font-size: 0.5em;
+  color: var(--color-text-muted);
+}
+
+.book-hero__buy-btn {
+  flex: 1;
+}
+
+/* ================================
+   Book Features Section
+================================ */
+
+.book-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.book-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-ivory);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.book-feature:hover {
+  background: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.book-feature__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-gold-light);
+  border-radius: 50%;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.book-feature__text {
+  font-size: 0.875rem;
+  color: var(--color-text-medium);
+  line-height: 1.4;
+}
+
+.book-feature__text strong {
+  display: block;
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+/* ================================
+   Book Specifications
+================================ */
+
+.book-specs {
+  background: white;
+  padding: var(--space-4xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+}
+
+.book-specs__title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.book-specs__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.book-spec {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.book-spec:hover {
+  background: var(--color-cream);
+}
+
+.book-spec__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
+  border-radius: 50%;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.book-spec__content {
+  flex: 1;
+}
+
+.book-spec__label {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.book-spec__value {
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+/* ================================
+   Music Tracks Section
+================================ */
+
+.book-tracks {
+  background: var(--color-primary);
+  padding: var(--space-4xl);
+  border-radius: var(--radius-xl);
+  color: white;
+  margin-top: var(--space-3xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-tracks::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L30 55M5 30L55 30' stroke='%23ffffff' stroke-width='0.3' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+.book-tracks__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.book-tracks__title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: white;
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.book-tracks__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.track-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(8px);
+}
+
+.track-item__number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-gold);
+  color: var(--color-text-dark);
+  font-family: var(--font-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.track-item__title {
+  flex: 1;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.track-item__duration {
+  font-family: var(--font-accent);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ================================
+   Gallery Section
+================================ */
+
+.book-gallery {
+  padding: var(--space-4xl) 0;
+}
+
+.book-gallery__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.book-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.book-gallery__item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.book-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.book-gallery__item:hover img {
+  transform: scale(1.1);
+}
+
+.book-gallery__item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.book-gallery__item:hover::after {
+  opacity: 1;
+}
+
+/* ================================
+   Related Books
+================================ */
+
+.related-books {
+  background: var(--color-cream);
+  padding: var(--space-4xl) 0;
+}
+
+.related-books__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.related-books__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width: 1024px) {
+  .book-hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .book-hero__cover {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .book-hero__content {
+    padding-left: 0;
+  }
+  
+  .book-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-specs__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-tracks__list {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .related-books__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .book-hero__purchase {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .book-hero__price {
+    padding-right: 0;
+    padding-bottom: var(--space-lg);
+    border-right: none;
+    border-bottom: 1px solid var(--color-parchment);
+  }
+  
+  .related-books__grid {
+    grid-template-columns: 1fr;
+  }
+}

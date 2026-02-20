@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#bg)"/>
+  
+  <!-- Gold border -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A962" stroke-width="2"/>
+  
+  <!-- Musical note symbol -->
+  <g fill="#C9A962">
+    <!-- Note head -->
+    <ellipse cx="35" cy="65" rx="8" ry="6" transform="rotate(-20 35 65)"/>
+    <!-- Note stem -->
+    <rect x="41" y="25" width="3" height="42"/>
+    <!-- Note flag -->
+    <path d="M44 25 Q60 30, 55 45 Q52 38, 44 35" fill="#C9A962"/>
+    <!-- Second flag -->
+    <path d="M44 32 Q58 37, 53 50 Q50 44, 44 42" fill="#C9A962"/>
+  </g>
+  
+  <!-- Book pages hint -->
+  <g stroke="#C9A962" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M60 55 L75 50 L75 75 L60 80 Z"/>
+    <path d="M60 55 L60 80"/>
+  </g>
+</svg>

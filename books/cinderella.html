@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Золушка - музыкальная книга по балету С.С. Прокофьева с волшебными иллюстрациями и классической записью оркестра.">
+  <title>Золушка - Музыкальная книга | Romana's Book</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/book-page.css">
+</head>
+<body>
+  <div class="particles-container" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="../index.html" class="header__logo">
+        <div>
+          <div class="header__logo-text">Romana's Book</div>
+          <div class="header__logo-tagline">Музыкальное издательство</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav__toggle" aria-label="Меню">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Главная</a></li>
+          <li><a href="../index.html#books" class="nav__link nav__link--active">Книги</a></li>
+          <li><a href="../index.html#about" class="nav__link">Об издательстве</a></li>
+          <li><a href="../info.html" class="nav__link">Доставка</a></li>
+          <li><a href="../index.html#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+        <a href="../index.html#books" class="btn btn--gold btn--lg">Все книги</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="book-hero">
+    <div class="book-hero__bg-pattern"></div>
+    <div class="container">
+      <div class="book-hero__inner">
+        <div class="book-hero__cover reveal reveal--left">
+          <div class="book-hero__cover-wrapper">
+            <img src="../images/golden.png" alt="Книга Золушка" class="book-hero__cover-image"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%2390caf9%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%2364b5f6%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill=%22url(%23g)%22 width=%22400%22 height=%22500%22 rx=%228%22/%3E%3Crect x=%2220%22 y=%2220%22 width=%22360%22 height=%22460%22 fill=%22none%22 stroke=%22%23C9A962%22 stroke-width=%222%22 rx=%224%22/%3E%3Ctext x=%22200%22 y=%22220%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22 font-size=%2248%22 fill=%22%23C9A962%22%3EЗолушка%3C/text%3E%3Ctext x=%22200%22 y=%22280%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22 font-size=%2218%22 fill=%22white%22%3EС.С. Прокофьев%3C/text%3E%3C/svg%3E'">
+          </div>
+        </div>
+        
+        <div class="book-hero__content reveal reveal--right">
+          <span class="book-hero__composer">С.С. Прокофьев</span>
+          <h1 class="book-hero__title">
+            Золушка
+            <span>Сказочная история о мечте и чуде</span>
+          </h1>
+          <p class="book-hero__description">
+            Сказочная история в музыке великого Сергея Прокофьева с волшебными 
+            иллюстрациями и классической записью симфонического оркестра. Книга 
+            погружает в атмосферу бала и волшебства, знакомя детей с шедевром 
+            мирового балетного искусства.
+          </p>
+          
+          <div class="book-hero__purchase">
+            <div class="book-hero__price">
+              <span class="book-hero__price-label">Цена</span>
+              <span class="book-hero__price-value">3 500 <small>₽</small></span>
+            </div>
+            <a href="#order" class="btn btn--gold btn--lg book-hero__buy-btn btn-ripple">
+              Заказать книгу
+            </a>
+          </div>
+          
+          <div class="book-features">
+            <div class="book-feature">
+              <div class="book-feature__icon">🎵</div>
+              <div class="book-feature__text">
+                <strong>10 треков</strong>
+                60-120 сек каждый
+              </div>
+            </div>
+            <div class="book-feature">
+              <div class="book-feature__icon">📖</div>
+              <div class="book-feature__text">
+                <strong>22 страницы</strong>
+                Формат 23×19 см
+              </div>
+            </div>
+            <div class="book-feature">
+              <div class="book-feature__icon">🎁</div>
+              <div class="book-feature__text">
+                <strong>Подарочная</strong>
+                Коробка на магните
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="book-specs reveal">
+        <h2 class="book-specs__title">Характеристики издания</h2>
+        <div class="book-specs__grid">
+          <div class="book-spec">
+            <div class="book-spec__icon">📚</div>
+            <div class="book-spec__content">
+              <span class="book-spec__label">Обложка</span>
+              <span class="book-spec__value">Твёрдая с тиснением золотой фольгой</span>
+            </div>
+          </div>
+          <div class="book-spec">
+            <div class="book-spec__icon">📐</div>
+            <div class="book-spec__content">
+              <span class="book-spec__label">Формат</span>
+              <span class="book-spec__value">23 × 19 × 3 см</span>
+            </div>
+          </div>
+          <div class="book-spec">
+            <div class="book-spec__icon">🎼</div>
+            <div class="book-spec__content">
+              <span class="book-spec__label">Композитор</span>
+              <span class="book-spec__value">Сергей Сергеевич Прокофьев</span>
+            </div>
+          </div>
+          <div class="book-spec">
+            <div class="book-spec__icon">🎨</div>
+            <div class="book-spec__content">
+              <span class="book-spec__label">Иллюстрации</span>
+              <span class="book-spec__value">Волшебные авторские рисунки</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="book-tracks reveal">
+        <div class="book-tracks__inner">
+          <h2 class="book-tracks__title">Музыкальные фрагменты</h2>
+          <div class="book-tracks__list">
+            <div class="track-item">
+              <span class="track-item__number">1</span>
+              <span class="track-item__title">Вступление</span>
+              <span class="track-item__duration">1:45</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">2</span>
+              <span class="track-item__title">Фея-крёстная</span>
+              <span class="track-item__duration">1:30</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">3</span>
+              <span class="track-item__title">Сборы на бал</span>
+              <span class="track-item__duration">1:55</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">4</span>
+              <span class="track-item__title">Танец с апельсинами</span>
+              <span class="track-item__duration">1:20</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">5</span>
+              <span class="track-item__title">Большой вальс</span>
+              <span class="track-item__duration">2:00</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">6</span>
+              <span class="track-item__title">Полночь</span>
+              <span class="track-item__duration">1:40</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">7</span>
+              <span class="track-item__title">Галоп Принца</span>
+              <span class="track-item__duration">1:15</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">8</span>
+              <span class="track-item__title">Примерка туфельки</span>
+              <span class="track-item__duration">1:35</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">9</span>
+              <span class="track-item__title">Адажио</span>
+              <span class="track-item__duration">1:50</span>
+            </div>
+            <div class="track-item">
+              <span class="track-item__number">10</span>
+              <span class="track-item__title">Финал</span>
+              <span class="track-item__duration">1:25</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="section" style="background: var(--color-cream);">
+    <div class="container container--narrow">
+      <div class="text-center mb-5 reveal">
+        <div class="ornament">
+          <span class="ornament__line"></span>
+          <span class="ornament__symbol">🎁</span>
+          <span class="ornament__line"></span>
+        </div>
+        <h2>Оформить заказ</h2>
+        <p class="text-muted">Заполните форму и мы свяжемся с вами</p>
+      </div>
+      
+      <form class="reveal" style="background: white; padding: var(--space-2xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-soft);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin-bottom: var(--space-lg);">
+          <div>
+            <label style="display: block; font-family: var(--font-accent); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: var(--space-sm);">Имя</label>
+            <input type="text" class="input" placeholder="Ваше имя" required>
+          </div>
+          <div>
+            <label style="display: block; font-family: var(--font-accent); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: var(--space-sm);">Телефон</label>
+            <input type="tel" class="input" placeholder="+7 (___) ___-__-__" required>
+          </div>
+        </div>
+        <div style="margin-bottom: var(--space-xl);">
+          <label style="display: block; font-family: var(--font-accent); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: var(--space-sm);">Комментарий</label>
+          <textarea class="input" rows="3" placeholder="Адрес доставки или пожелания"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg btn-ripple" style="width: 100%;">
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border-top: none; padding-top: var(--space-xl);">
+        <p>&copy; 2024 Romana's Book. Все права защищены.</p>
+        <div class="footer__legal">
+          <a href="../privacy.html">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

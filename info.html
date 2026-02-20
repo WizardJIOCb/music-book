@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Информация о доставке и оплате музыкальных книг Romana's Book. СДЭК по всей России.">
+  <title>Доставка и оплата | Romana's Book</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <style>
+    .info-hero {
+      padding: calc(90px + var(--space-4xl)) 0 var(--space-4xl);
+      background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-ivory) 100%);
+      text-align: center;
+    }
+    
+    .info-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: var(--space-md);
+    }
+    
+    .info-hero__subtitle {
+      font-size: 1.125rem;
+      color: var(--color-text-medium);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .info-section {
+      padding: var(--space-4xl) 0;
+    }
+    
+    .info-section--alt {
+      background: white;
+    }
+    
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+    }
+    
+    .info-card {
+      background: white;
+      padding: var(--space-2xl);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      transition: all var(--transition-base);
+    }
+    
+    .info-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-medium);
+    }
+    
+    .info-card__icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--space-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
+      border-radius: 50%;
+      font-size: 2rem;
+    }
+    
+    .info-card__title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .info-card__text {
+      font-size: 0.95rem;
+      color: var(--color-text-medium);
+      margin-bottom: 0;
+    }
+    
+    .info-card__highlight {
+      display: block;
+      font-family: var(--font-accent);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-gold-dark);
+      margin-top: var(--space-md);
+    }
+    
+    .info-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+    
+    .info-block {
+      background: white;
+      padding: var(--space-2xl);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .info-block__title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 2px solid var(--color-gold);
+    }
+    
+    .info-list {
+      list-style: none;
+    }
+    
+    .info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-parchment);
+    }
+    
+    .info-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .info-list__icon {
+      width: 24px;
+      height: 24px;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .info-list__content {
+      flex: 1;
+    }
+    
+    .info-list__label {
+      font-weight: 500;
+      color: var(--color-text-dark);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .info-list__value {
+      font-size: 0.95rem;
+      color: var(--color-text-medium);
+    }
+    
+    .faq-section {
+      background: var(--color-primary);
+      padding: var(--space-4xl) 0;
+      color: white;
+    }
+    
+    .faq-section__title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+    
+    .faq-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+      transition: background var(--transition-fast);
+    }
+    
+    .faq-item:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .faq-item__question {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      color: var(--color-gold-light);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .faq-item__answer {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+    
+    @media (max-width: 1024px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .info-details {
+        grid-template-columns: 1fr;
+      }
+      
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="particles-container" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div>
+          <div class="header__logo-text">Romana's Book</div>
+          <div class="header__logo-tagline">Музыкальное издательство</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="nav__toggle" aria-label="Меню">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="index.html#books" class="nav__link">Книги</a></li>
+          <li><a href="index.html#about" class="nav__link">Об издательстве</a></li>
+          <li><a href="info.html" class="nav__link nav__link--active">Доставка</a></li>
+          <li><a href="index.html#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+        <a href="index.html#books" class="btn btn--gold btn--lg">Выбрать книгу</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="info-hero">
+    <div class="container">
+      <div class="ornament reveal">
+        <span class="ornament__line"></span>
+        <span class="ornament__symbol">📦</span>
+        <span class="ornament__line"></span>
+      </div>
+      <h1 class="info-hero__title reveal">Доставка и оплата</h1>
+      <p class="info-hero__subtitle reveal">
+        Отправляем книги по всей России курьерской службой СДЭК. 
+        Бережная упаковка гарантирует сохранность подарочного издания.
+      </p>
+    </div>
+  </section>
+
+  <!-- Delivery Cards -->
+  <section class="info-section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card reveal reveal--delay-1">
+          <div class="info-card__icon">🚚</div>
+          <h3 class="info-card__title">Москва и Санкт-Петербург</h3>
+          <p class="info-card__text">
+            Доставка курьером СДЭК до двери или в пункт выдачи
+          </p>
+          <span class="info-card__highlight">2-3 дня</span>
+        </div>
+        
+        <div class="info-card reveal reveal--delay-2">
+          <div class="info-card__icon">📍</div>
+          <h3 class="info-card__title">По всей России</h3>
+          <p class="info-card__text">
+            Доставка в любой город России через сеть пунктов СДЭК
+          </p>
+          <span class="info-card__highlight">2-7 дней</span>
+        </div>
+        
+        <div class="info-card reveal reveal--delay-3">
+          <div class="info-card__icon">💰</div>
+          <h3 class="info-card__title">Стоимость</h3>
+          <p class="info-card__text">
+            Точная стоимость рассчитывается при оформлении заказа
+          </p>
+          <span class="info-card__highlight">от 180 ₽</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="info-section info-section--alt">
+    <div class="container">
+      <div class="info-details">
+        <div class="info-block reveal reveal--left">
+          <h3 class="info-block__title">Способы оплаты</h3>
+          <ul class="info-list">
+            <li>
+              <svg class="info-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+              <div class="info-list__content">
+                <div class="info-list__label">Банковская карта</div>
+                <div class="info-list__value">Visa, MasterCard, МИР — безопасная онлайн-оплата</div>
+              </div>
+            </li>
+            <li>
+              <svg class="info-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+              <div class="info-list__content">
+                <div class="info-list__label">Оплата при получении</div>
+                <div class="info-list__value">Наличными или картой в пункте выдачи СДЭК</div>
+              </div>
+            </li>
+            <li>
+              <svg class="info-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+              <div class="info-list__content">
+                <div class="info-list__label">Безналичный расчёт</div>
+                <div class="info-list__value">Для юридических лиц по счёту с НДС</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="info-block reveal reveal--right">
+          <h3 class="info-block__title">Упаковка и гарантии</h3>
+          <ul class="info-list">
+            <li>
+              <svg class="info-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+              <div class="info-list__content">
+                <div class="info-list__label">Подарочная коробка</div>
+                <div class="info-list__value">Каждая книга поставляется в изящной коробке на магните</div>
+              </div>
+            </li>
+            <li>
+              <svg class="info-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <div class="info-list__content">
+                <div class="info-list__label">Защитная упаковка</div>
+                <div class="info-list__value">Дополнительная защита воздушно-пузырьковой плёнкой</div>
+              </div>
+            </li>
+            <li>
+              <svg class="info-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <div class="info-list__content">
+                <div class="info-list__label">Гарантия качества</div>
+                <div class="info-list__value">Обмен или возврат при обнаружении брака</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="faq-section__title reveal">Частые вопросы</h2>
+      
+      <div class="faq-grid">
+        <div class="faq-item reveal reveal--delay-1">
+          <h4 class="faq-item__question">Как отследить заказ?</h4>
+          <p class="faq-item__answer">
+            После отправки вы получите SMS и email с трек-номером для отслеживания 
+            на сайте СДЭК или в их мобильном приложении.
+          </p>
+        </div>
+        
+        <div class="faq-item reveal reveal--delay-2">
+          <h4 class="faq-item__question">Можно ли заказать доставку курьером?</h4>
+          <p class="faq-item__answer">
+            Да, в Москве и Санкт-Петербурге доступна экспресс-доставка курьером 
+            до двери. Стоимость рассчитывается индивидуально.
+          </p>
+        </div>
+        
+        <div class="faq-item reveal reveal--delay-3">
+          <h4 class="faq-item__question">Как оформить корпоративный заказ?</h4>
+          <p class="faq-item__answer">
+            Для заказов от 10 книг свяжитесь с нами по телефону или email. 
+            Мы подготовим счёт и организуем доставку.
+          </p>
+        </div>
+        
+        <div class="faq-item reveal reveal--delay-4">
+          <h4 class="faq-item__question">Что делать, если книга повреждена?</h4>
+          <p class="faq-item__answer">
+            Пожалуйста, сфотографируйте повреждение и свяжитесь с нами. 
+            Мы оперативно решим вопрос с заменой.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section text-center" style="background: var(--color-cream);">
+    <div class="container">
+      <h2 class="reveal">Остались вопросы?</h2>
+      <p class="text-muted reveal" style="max-width: 500px; margin: var(--space-md) auto var(--space-xl);">
+        Свяжитесь с нами любым удобным способом — мы с радостью поможем
+      </p>
+      <div class="reveal" style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+        <a href="tel:+79276367757" class="btn btn--primary btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          Позвонить
+        </a>
+        <a href="mailto:info@music-book.me" class="btn btn--outline btn--lg">
+          Написать на email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border-top: none; padding-top: var(--space-xl);">
+        <p>&copy; 2024 Romana's Book. ИП Ибрагимова Рома Данировна</p>
+        <div class="footer__legal">
+          <a href="privacy.html">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

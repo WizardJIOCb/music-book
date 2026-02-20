@@ -1,0 +1,83 @@
+/* Romana's Book - Design System Variables */
+/* Ballet & Music Publishing Aesthetic */
+
+:root {
+  /* Primary Colors - Elegant Gold & Black */
+  --color-primary: #1A1A1A;
+  --color-primary-light: #2D2D2D;
+  --color-primary-dark: #0D0D0D;
+  
+  /* Secondary - Gold Accents */
+  --color-gold: #C9A962;
+  --color-gold-light: #E4D4A8;
+  --color-gold-dark: #c3932c;
+  
+  /* Neutral Tones - Cream & Ivory */
+  --color-cream: #FDFBF7;
+  --color-ivory: #FAF8F3;
+  --color-warm-white: #FFFDF9;
+  --color-parchment: #F5F1E8;
+  
+  /* Text Colors */
+  --color-text-dark: #1A1A1A;
+  --color-text-medium: #3D3D3D;
+  --color-text-light: #6B6B6B;
+  --color-text-muted: #8A8A8A;
+  
+  /* Accent Colors */
+  --color-rose: #E4D4A8;
+  --color-blush: #F8F4E9;
+  --color-mauve: #D4C9A8;
+  --color-burgundy: #1A1A1A;
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 16px 60px rgba(0, 0, 0, 0.14);
+  --shadow-gold: 0 4px 20px rgba(201, 169, 98, 0.25);
+  
+  /* Typography */
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-accent: 'Montserrat', 'Helvetica Neue', sans-serif;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-elegant: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-index layers */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+  
+  /* Container widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+}
