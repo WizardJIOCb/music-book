@@ -253,7 +253,8 @@
 }
 
 .hero__logo {
-  width: 180px;
+  width: 100%;
+  max-width: 500px;
   height: auto;
   margin-bottom: var(--space-xl);
   animation: fadeInUp 0.8s ease forwards;
