@@ -1106,13 +1106,27 @@ height: 330px;
   }
   
   /* Header mobile fix */
+  .header__inner {
+    padding: 0 var(--space-md);
+  }
+  
   .header__logo-text {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
   
   .header__logo-tagline {
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    max-width: 100px;
+  }
+  
+  .nav {
+    gap: var(--space-md);
+  }
+  
+  .nav > .btn {
+    padding: var(--space-sm) var(--space-md);
     font-size: 0.65rem;
-    letter-spacing: 0.1em;
   }
   
   /* Partners section mobile */
