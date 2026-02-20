@@ -1012,6 +1012,15 @@ height: 330px;
   margin-top: 3px;
 }
 
+.footer__contact-item a {
+  color: rgba(255,255,255,0.7);
+  transition: color var(--transition-fast);
+}
+
+.footer__contact-item a:hover {
+  color: var(--color-gold);
+}
+
 .footer__bottom {
   padding-top: var(--space-xl);
   display: flex;
