@@ -252,6 +252,14 @@
   margin-top: 90px;
 }
 
+.hero__logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: var(--space-xl);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
 .hero__subtitle {
   font-family: var(--font-accent);
   font-size: 0.875rem;
