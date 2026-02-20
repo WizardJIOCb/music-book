@@ -1126,6 +1126,10 @@ height: 330px;
     align-items: center;
   }
   
+  .hero__scroll {
+    display: none;
+  }
+  
   .hero__cta {
     flex-direction: column;
     align-items: center;
