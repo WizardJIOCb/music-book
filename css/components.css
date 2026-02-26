@@ -1059,6 +1059,30 @@ height: 330px;
   }
 }
 
+@media (max-width: 1100px) {
+  .header__inner {
+    padding: 0 var(--space-md);
+  }
+
+  .nav {
+    gap: var(--space-lg);
+  }
+
+  .nav__list {
+    gap: var(--space-md);
+  }
+
+  .nav__link {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nav > .btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 0.7rem;
+  }
+}
+
 @media (max-width: 768px) {
   .header__inner {
     height: 70px;
