@@ -153,7 +153,27 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-ivory) 50%, var(--color-parchment) 100%);
+  background: var(--color-primary);
+}
+
+.hero__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/background.jpg') center center / cover no-repeat;
+  z-index: 0;
+}
+
+.hero__bg-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.45);
 }
 
 .hero__background {
@@ -279,7 +299,7 @@
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 600;
   line-height: 1.1;
-  color: var(--color-text-dark);
+  color: #fff;
   margin-bottom: var(--space-lg);
   animation: fadeInUp 0.8s ease forwards;
   animation-delay: 0.4s;
@@ -289,12 +309,12 @@
 .hero__title span {
   display: block;
   font-style: italic;
-  color: var(--color-gold-dark);
+  color: var(--color-gold-light);
 }
 
 .hero__description {
   font-size: 1.25rem;
-  color: var(--color-text-medium);
+  color: rgba(255,255,255,0.85);
   max-width: 600px;
   margin: 0 auto var(--space-2xl);
   animation: fadeInUp 0.8s ease forwards;
