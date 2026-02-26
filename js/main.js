@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSmoothScroll();
   initBookCards();
   initMagneticButtons();
+  initScrollTop();
 });
 
 /* ================================
@@ -398,4 +399,31 @@ function throttle(func, limit) {
       setTimeout(() => inThrottle = false, limit);
     }
   };
+}
+
+/* ================================
+   Scroll-to-Top Button
+================================ */
+function initScrollTop() {
+  const btn = document.getElementById('rbScrollTop');
+  if (!btn) return;
+
+  const SHOW_AFTER = 220;
+  let ticking = false;
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function() {
+      btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER);
+      ticking = false;
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }

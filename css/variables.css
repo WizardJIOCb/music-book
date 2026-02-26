@@ -80,4 +80,9 @@
   --container-lg: 1024px;
   --container-xl: 1280px;
   --container-2xl: 1440px;
+
+  /* Scroll-to-top */
+  --rb-ink: #C9A962;
+  --rb-ink-hover: #E4D4A8;
+  --rb-shadow: rgba(201,169,98,.35);
 }
