@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <script>
+    // Redirect to music-book.me if debug parameter is not set
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('debug') !== '1') {
+        window.location.href = 'https://music-book.me';
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Romana's Book - Издательство музыкальных книг для детей. Балеты Чайковского в уникальных иллюстрированных изданиях с оригинальными записями оркестра.">
